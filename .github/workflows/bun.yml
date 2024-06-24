@@ -8,7 +8,12 @@ jobs:
     steps:
       - uses: oven-sh/setup-bun@v1
       - run: bun -v
-      - run: ls
+      - name: Checkout Respository
+        run: actions/checkout@v3
+      - name: List files and print working directory
+        run: |
+          ls
+          pwd
       - run: bun main.ts
 
       
