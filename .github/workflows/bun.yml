@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Bun Demo
     steps:
-      - uses: oven-sh/setup-bun@v1
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
       
       - name: Checkout Repository
         uses: actions/checkout@v3
