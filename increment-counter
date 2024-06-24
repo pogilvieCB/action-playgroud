@@ -1,0 +1,21 @@
+#!/bin/bash
+
+COUNTER_FILE="counter.txt"
+
+if [ ! -f $COUNTER_FILE ]
+then
+    echo 0 > $COUNTER_FILE
+fi
+
+COUNTER=$(CAT $COUNTER_FILE)
+COUNTER=$((COUNTER + 1))
+
+echo $COUNTER > $COUNTER_FILE
+
+echo "commit $COUNTER" >> README.md
+
+git add --all
+git commit -m "Increment counter $COUNTER"
+git push
+
+

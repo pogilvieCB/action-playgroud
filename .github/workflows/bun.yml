@@ -8,4 +8,6 @@ jobs:
     steps:
       - uses: oven-sh/setup-bun@v1
       - run: bun -v
+      - run: bun main.ts
+
       
