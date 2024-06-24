@@ -1,4 +1,4 @@
-# action-playgroud
+# action-playground
 Run Github Action tests
 
 
