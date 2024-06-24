@@ -1,19 +1,25 @@
 name: Bun Demo
-run-name: Bun github action Demo
+run-name: Bun GitHub Action Demo
+
 on: [push]
+
 jobs:
   bun-demo:
     runs-on: ubuntu-latest
     name: Bun Demo
     steps:
       - uses: oven-sh/setup-bun@v1
-      - run: bun -v
-      - name: Checkout Respository
-        run: actions/checkout@v3
+      
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Check Bun version
+        run: bun -v
+
       - name: List files and print working directory
         run: |
           ls
           pwd
-      - run: bun main.ts
 
-      
+      - name: Run a simple JavaScript script
+        run: bun main.ts
