@@ -7,5 +7,5 @@ jobs:
     name: Bun Demo
     steps:
       - uses: oven-sh/setup-bun@v2
-      - run: bun main.ts
+      - run: bun ./main.ts
       
