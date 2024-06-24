@@ -1,0 +1,11 @@
+name: Bun Demo
+run-name: Bun github action Demo
+on: [push]
+jobs:
+  bun-demo:
+    runs-on: ubuntu-latest
+    name: Bun Demo
+    steps:
+      - uses: oven-sh/setup-bun@v2
+      - run: bun main.ts
+      
